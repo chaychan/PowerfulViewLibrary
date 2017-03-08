@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PowerfulEditText">
+        <!--功能的类型-->
+        <attr name="funcType">
+            <enum name="normal" value="-1"/>
+            <enum name="canClear" value="0"/>
+            <enum name="canWatchPwd" value="1" />
+        </attr>
+        <!--关闭查看密码的图标-->
+        <attr name="eyeClose" format="reference"/>
+        <!--开启查看密码的图标-->
+        <attr name="eyeOpen" format="reference"/>
+        <!--左侧Drawable的宽度-->
+        <attr name="leftDrawableWidth" format="dimension"/>
+        <!--左侧Drawable的高度-->
+        <attr name="leftDrawableHeight" format="dimension"/>
+        <!--右侧Drawable的宽度-->
+        <attr name="rightDrawableWidth" format="dimension"/>
+        <!--右侧Drawable的高度-->
+        <attr name="rightDrawableHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:id="@+id/pet_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:funcType="canClear"
+        android:layout_marginTop="20dp"
+        app:rightDrawableWidth="25dp"
+        app:rightDrawableHeight="25dp"
+        />
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:id="@+id/pet_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:funcType="canWatchPwd"
+        android:inputType="numberPassword"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:onClick="submit"
+        android:text="提交"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
