@@ -11,10 +11,14 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.EditText;
 
-public class PowerfulEditText extends EditText implements
-        TextWatcher {
+public class PowerfulEditText extends EditText {
 
     private static final String TAG = PowerfulEditText.class.getSimpleName();
+    private static final int TYPE_NORMAL = -1;
+    private static final int TYPE_CAN_CLEAR = 0;
+    private static final int TYPE_CAN_WATCH_PWD = 1;
+
+
     /**
      * 右侧图标的Drawable对象
      */
@@ -77,7 +81,7 @@ public class PowerfulEditText extends EditText implements
         super(context, attrs, defStyle);
         ta = context.obtainStyledAttributes(attrs, R.styleable.PowerfulEditText);
 
-        funcType = ta.getInt(R.styleable.PowerfulEditText_funcType, -1);
+        funcType = ta.getInt(R.styleable.PowerfulEditText_funcType, TYPE_NORMAL);
 
         eyeCloseResourseId = ta.getResourceId(R.styleable.PowerfulEditText_eyeClose, R.mipmap.eye_close);
         eyeOpenResourseId = ta.getResourceId(R.styleable.PowerfulEditText_eyeOpen, R.mipmap.eye_open);
@@ -93,10 +97,10 @@ public class PowerfulEditText extends EditText implements
 
         if (mRightDrawable == null) {
             //如果右侧没有图标
-            if (funcType == 0) {
+            if (funcType == TYPE_CAN_CLEAR) {
                 //有清除功能，设置默认叉号选择器
                 mRightDrawable = getResources().getDrawable(R.drawable.delete_selector);
-            } else if (funcType == 1) {
+            } else if (funcType == TYPE_CAN_WATCH_PWD) {
                 //有查看密码功能，设置默认查看密码功能
                 mRightDrawable = getResources().getDrawable(eyeCloseResourseId);
                 mEyeOpenDrawable = getResources().getDrawable(eyeOpenResourseId);
@@ -120,7 +124,38 @@ public class PowerfulEditText extends EditText implements
             //如果是清除功能，则一开始隐藏右侧默认图标，否则不隐藏右侧默认图标
             setRightIconVisible(funcType == 0 ? false : true);
             //设置输入框里面内容发生改变的监听
-            addTextChangedListener(this);
+            addTextChangedListener(new TextWatcher() {
+                /**
+                 * 当输入框里面内容发生变化的时候回调的方法
+                 */
+                @Override
+                public void onTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                    if (funcType == 0) {
+                        setRightIconVisible(s.length() > 0);
+                    }
+
+                    if (textListener != null) {
+                        textListener.onTextChanged(s, start, count, after);
+                    }
+                }
+
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count,
+                                              int after) {
+                    if (textListener != null) {
+                        textListener.beforeTextChanged(s, start, count, after);
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (textListener != null) {
+                        textListener.afterTextChanged(s);
+                    }
+                }
+
+            });
         }
     }
 
@@ -141,10 +176,10 @@ public class PowerfulEditText extends EditText implements
                 if (touchable) {
 
                     if (onRightClickListener == null) {
-                        if (funcType == 0) {
+                        if (funcType == TYPE_CAN_CLEAR) {
                             //如果没有设置右边图标的点击事件，并且带有清除功能，默认清除文本
                             this.setText("");
-                        } else if (funcType == 1) {
+                        } else if (funcType == TYPE_CAN_WATCH_PWD) {
                             //如果没有设置右边图标的点击事件，并且带有查看密码功能，点击查看密码
                             if (eyeOpen) {
                                 //变为密文 TYPE_CLASS_TEXT 和 TYPE_TEXT_VARIATION_PASSWORD 必须一起使用
@@ -195,36 +230,6 @@ public class PowerfulEditText extends EditText implements
         }
     }
 
-
-    /**
-     * 当输入框里面内容发生变化的时候回调的方法
-     */
-    @Override
-    public void onTextChanged(CharSequence s, int start, int count,
-                              int after) {
-        if (funcType == 0) {
-            setRightIconVisible(s.length() > 0);
-        }
-
-        if (textListener != null) {
-            textListener.onTextChanged(s, start, count, after);
-        }
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count,
-                                  int after) {
-        if (textListener != null) {
-            textListener.beforeTextChanged(s, start, count, after);
-        }
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-        if (textListener != null) {
-            textListener.afterTextChanged(s);
-        }
-    }
 
 
     private OnRightClickListener onRightClickListener;
