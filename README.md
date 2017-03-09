@@ -23,7 +23,7 @@
 
 运行后，效果如下：
 
-![](http://img-1252302110.costj.myqcloud.com/1.gif)
+![](./introduce_img/1.gif)
 
 &emsp;&emsp;上图所示的删除图标是默认的，当然也可以指定右侧删除按钮的图标，只需添加多drawableRight属性，这里建议使用一个selector，分别为普通状态和按压状态设置一张图片，这样当按压图标的时候，会有一种按压的状态，selector的编写如下：
 
@@ -49,7 +49,7 @@
 
 运行后，效果如下：
 
-![](http://img-1252302110.costj.myqcloud.com/%E8%8B%A5%E6%B0%B4GIF%E6%88%AA%E5%9B%BE_2017%E5%B9%B43%E6%9C%888%E6%97%A517%E7%82%B99%E5%88%8636%E7%A7%92.gif)
+![](./introduce_img/2.gif)
 
 &emsp;&emsp;上图所示的右侧图标是默认的，同样也可以指定开启查看密码的图标和关闭查看密码的图标，只需要在属性eyeOpen中指定开启查看密码引用的图片，在eyeClosed中指定关闭查看密码引用的图片即可，如下，更换开启查看密码的图标,如项目默认的图标ic_launcher
 
@@ -63,7 +63,7 @@
 
 运行后，效果如下：
 
-![](http://img-1252302110.costj.myqcloud.com/%E8%8B%A5%E6%B0%B4GIF%E6%88%AA%E5%9B%BE_2017%E5%B9%B43%E6%9C%888%E6%97%A517%E7%82%B912%E5%88%8652%E7%A7%92.gif)	
+![](./introduce_img/3.gif)	
 
 这样开启查看密码的图标就更换了，如果还需要更换关闭密码查看的图标，可以指定eyeClose，引用对应的图标。
 
@@ -79,7 +79,7 @@
         />
 
 
-![](http://img-1252302110.costj.myqcloud.com/4.jpg)
+![](./introduce_img/4.jpg)
 
 &emsp;&emsp;如图，指定了drawableLeft的图片为ic_laucher,图片看起来比较大，这时如果我们想要将其调小，则可以添加leftDrawableWidth、leftDrawableHeight指定左侧图片的宽高。
 
@@ -96,7 +96,7 @@
 
 上面代码，指定了leftDrawableWidth和leftDrawableHeight的大小都为30dp，运行的效果如下：
 
-![](http://img-1252302110.costj.myqcloud.com/5.jpg)
+![](./introduce_img/5.jpg)
 
 可以看到左侧的图标变小了，同样也可以设置右侧图片的宽高，对应的属性是rightDrawableWidth、rightDrawableHeight。
 
@@ -128,7 +128,7 @@ Activity
 
 运行效果如下：
 
-![](http://img-1252302110.costj.myqcloud.com/2017%E5%B9%B43%E6%9C%889%E6%97%A511%E7%82%B950%E5%88%8638%E7%A7%92.gif)
+![](./introduce_img/6.gif)
 
     
 &emsp;&emsp;上面布局文件中，和普通的EditText属性一样，funcType一共有三个属性，分别是normal(默认)、canClear(带清除功能)、canWatchPwd（带查看密码功能）。如果不指定funcType，则默认是normal,普通方式。
