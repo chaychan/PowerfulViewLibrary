@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="ExpandableLinearLayout">
+        <!--默认显示的条目数-->
+        <attr name="defaultItemCount" format="integer" />
+        <!--提示文字的大小-->
+        <attr name="tipTextSize" format="dimension" />
+        <!--字体颜色-->
+        <attr name="tipTextColor" format="color"/>
+        <!--展开时的文字提示-->
+        <attr name="expandText" format="string" />
+        <!--收起时的文字提示-->
+        <attr name="hideText" format="string" />
+    </declare-styleable>
+
+
     <declare-styleable name="PowerfulEditText">
         <!--功能的类型-->
         <attr name="funcType">
@@ -20,4 +34,9 @@
         <!--右侧Drawable的高度-->
         <attr name="rightDrawableHeight" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="PhoneEditText">
+        <attr name="dividerString" format="string" />
+    </declare-styleable>
+
 </resources>

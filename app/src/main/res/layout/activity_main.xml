@@ -15,6 +15,17 @@
         android:drawableRight="@mipmap/search"
         />
 
+    <com.chaychan.viewlib.BankCardNumEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <com.chaychan.viewlib.ExpandableLinearLayout
+        android:id="@+id/ell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultItemCount="2"
+        app:expandText="收起"
+        app:hideText="查看更多"
+        />
 
 </LinearLayout>

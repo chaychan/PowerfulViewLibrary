@@ -14,8 +14,12 @@ import android.widget.EditText;
 public class PowerfulEditText extends EditText {
 
     private static final String TAG = PowerfulEditText.class.getSimpleName();
+
+    /**普通类型*/
     private static final int TYPE_NORMAL = -1;
+    /**自带清除功能的类型*/
     private static final int TYPE_CAN_CLEAR = 0;
+    /**自带密码查看功能的类型*/
     private static final int TYPE_CAN_WATCH_PWD = 1;
 
 
@@ -131,7 +135,8 @@ public class PowerfulEditText extends EditText {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int count,
                                           int after) {
-                    if (funcType == 0) {
+                    //如果是带有清除功能的类型，当文本内容发生变化的时候，根据内容的长度是否为0进行隐藏或显示
+                    if (funcType == TYPE_CAN_CLEAR) {
                         setRightIconVisible(s.length() > 0);
                     }
 
@@ -157,6 +162,8 @@ public class PowerfulEditText extends EditText {
 
             });
         }
+
+        ta.recycle();
     }
 
 
@@ -170,17 +177,17 @@ public class PowerfulEditText extends EditText {
         if (event.getAction() == MotionEvent.ACTION_UP) {
             if (getCompoundDrawables()[2] != null) {
 
-                boolean touchable = event.getX() > (getWidth() - getTotalPaddingRight())
+                boolean isTouched = event.getX() > (getWidth() - getTotalPaddingRight())
                         && (event.getX() < ((getWidth() - getPaddingRight())));
 
-                if (touchable) {
+                if (isTouched) {
 
                     if (onRightClickListener == null) {
                         if (funcType == TYPE_CAN_CLEAR) {
                             //如果没有设置右边图标的点击事件，并且带有清除功能，默认清除文本
                             this.setText("");
                         } else if (funcType == TYPE_CAN_WATCH_PWD) {
-                            //如果没有设置右边图标的点击事件，并且带有查看密码功能，点击查看密码
+                            //如果没有设置右边图标的点击事件，并且带有查看密码功能，点击切换密码查看方式
                             if (eyeOpen) {
                                 //变为密文 TYPE_CLASS_TEXT 和 TYPE_TEXT_VARIATION_PASSWORD 必须一起使用
                                 this.setTransformationMethod(PasswordTransformationMethod.getInstance());
@@ -256,6 +263,7 @@ public class PowerfulEditText extends EditText {
      * 输入框文本变化的回调，如果需要进行多一些操作判断，则设置此listen替代TextWatcher
      */
     public interface TextListener {
+
         void onTextChanged(CharSequence s, int start, int count, int after);
 
         void beforeTextChanged(CharSequence s, int start, int count, int after);
