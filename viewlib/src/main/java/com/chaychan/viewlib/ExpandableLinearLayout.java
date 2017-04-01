@@ -30,6 +30,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
     private String expandText;//展开时显示的文字
     private String hideText;//隐藏时显示的文字
     private ImageView ivArrow;
+    private RelativeLayout rlBottom;
 
     public ExpandableLinearLayout(Context context) {
         this(context, null);
@@ -53,7 +54,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
 
         View rootView = View.inflate(context, R.layout.expandable_linearlayout, null);
         llContainer = (LinearLayout) rootView.findViewById(R.id.ll_container);
-        RelativeLayout rlBottom =  (RelativeLayout) rootView.findViewById(R.id.rl_bottom);
+        rlBottom = (RelativeLayout) rootView.findViewById(R.id.rl_bottom);
         ivArrow = (ImageView) rootView.findViewById(R.id.iv_arrow);
 
         tvTip = (TextView) rootView.findViewById(R.id.tv_tip);
@@ -76,7 +77,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
      */
     private void refreshUI() {
         int childCount = llContainer.getChildCount();
-        tvTip.setVisibility(childCount > defaultItemCount ? VISIBLE : GONE);//控制隐藏
+        rlBottom.setVisibility(childCount > defaultItemCount ? VISIBLE : GONE);//控制隐显
         if (childCount > defaultItemCount) {
             hide(false);
         }
