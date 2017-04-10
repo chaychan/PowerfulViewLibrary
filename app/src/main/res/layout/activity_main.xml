@@ -28,4 +28,24 @@
         app:hideText="查看更多"
         />
 
+    <jaydenxiao.com.expandabletextview.ExpandableTextView
+        android:id="@+id/tv_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:ellipsize="end"
+        android:textColor="#666"
+        app:animDuration="200"
+        app:collapseDrawable="@drawable/icon_green_arrow_down"
+        app:collapseExpandGrarity="right"
+        app:collapseExpandTextColor="@color/main_color"
+        app:contentTextSize="12sp"
+        app:expandDrawable="@drawable/icon_green_arrow_up"
+        app:maxCollapsedLines="3"
+        app:textCollapse="@string/collapse"
+        app:textExpand="@string/expand"/>
+
+
+
 </LinearLayout>

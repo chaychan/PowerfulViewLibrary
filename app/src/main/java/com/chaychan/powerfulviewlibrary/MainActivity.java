@@ -10,6 +10,8 @@ import android.widget.Toast;
 import com.chaychan.viewlib.ExpandableLinearLayout;
 import com.chaychan.viewlib.PowerfulEditText;
 
+import jaydenxiao.com.expandabletextview.ExpandableTextView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ExpandableTextView etv = (ExpandableTextView) findViewById(R.id.tv_intro);
+        etv.setText("啊哈可接受的看哈市的哈数据库和的看就好撒看就好将卡上的空间哈看就好啊数据库和的空间哈市科空间哈市科技很多借口撒谎的健康哈数据库空间哈市科技很多借口撒谎的健康哈数据库空间哈市科技很多借口撒谎的健康哈数据库空间哈市科技很多借口撒谎的健康哈数据库技很多借口撒谎的健康哈数据库将撒谎的健康哈啊市科技哈看就好啊数据库的哈看将撒谎空间的哈市科技哈看将");
 
         View view1 = View.inflate(this, R.layout.item_expandable_linear_layout, null);
         View view2 = View.inflate(this, R.layout.item_expandable_linear_layout, null);
