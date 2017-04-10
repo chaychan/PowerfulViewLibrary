@@ -1,5 +1,6 @@
 
-package jaydenxiao.com.expandabletextview;
+package com.chaychan.viewlib.expandabletextview;
+
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -19,7 +20,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import me.codeboy.android.aligntextview.AlignTextView;
+import com.chaychan.viewlib.R;
+import com.chaychan.viewlib.UIUtils;
 
 /**
  * des:可伸展textview
@@ -131,10 +133,10 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
         textExpand = typedArray.getString(R.styleable.ExpandableTextView_textExpand);
 
         if (mExpandDrawable == null) {
-            mExpandDrawable = ContextCompat.getDrawable(getContext(),R.drawable.icon_green_arrow_up);
+            mExpandDrawable = ContextCompat.getDrawable(getContext(),R.mipmap.icon_green_arrow_up);
         }
         if (mCollapseDrawable == null) {
-            mCollapseDrawable = ContextCompat.getDrawable(getContext(), R.drawable.icon_green_arrow_down);
+            mCollapseDrawable = ContextCompat.getDrawable(getContext(), R.mipmap.icon_green_arrow_down);
         }
 
         if (TextUtils.isEmpty(textCollapse)) {
@@ -144,10 +146,10 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
             textExpand = getContext().getString(R.string.expand);
         }
         contentTextColor = typedArray.getColor(R.styleable.ExpandableTextView_contentTextColor, ContextCompat.getColor(getContext(), R.color.gray));
-        contentTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_contentTextSize, UIUtil.sp2px(getContext(),14));
+        contentTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_contentTextSize, UIUtils.sp2px(getContext(),14));
 
         collapseExpandTextColor = typedArray.getColor(R.styleable.ExpandableTextView_collapseExpandTextColor, ContextCompat.getColor(getContext(), R.color.main_color));
-        collapseExpandTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_collapseExpandTextSize, UIUtil.sp2px(getContext(),14));
+        collapseExpandTextSize = typedArray.getDimension(R.styleable.ExpandableTextView_collapseExpandTextSize, UIUtils.sp2px(getContext(),14));
 
         grarity = typedArray.getInt(R.styleable.ExpandableTextView_collapseExpandGrarity, Gravity.LEFT);
         drawableGrarity=typedArray.getInt(R.styleable.ExpandableTextView_drawableGrarity, Gravity.RIGHT);
@@ -164,6 +166,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
      */
     @Override
     protected void onFinishInflate() {
+        super.onFinishInflate();
         findViews();
     }
 

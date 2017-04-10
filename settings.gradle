@@ -1,1 +1,1 @@
-include ':app', ':viewlib', ':ExpandableTextView', ':AliagnTextView'
+include ':app', ':viewlib'

@@ -1,4 +1,4 @@
-package me.codeboy.android.aligntextview;
+package com.chaychan.viewlib.expandabletextview;
 
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -10,11 +10,11 @@ import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
+import com.chaychan.viewlib.R;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-
-import me.codeboy.android.aligntextview.util.CBAlignTextViewUtil;
 
 /**
  * 对齐的TextView

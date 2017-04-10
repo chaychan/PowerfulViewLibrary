@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <me.codeboy.android.aligntextview.AlignTextView
+
+    <com.chaychan.viewlib.expandabletextview.AlignTextView
         android:id="@+id/expandable_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,6 +14,7 @@
         tools:text="@string/test_content"
         android:ellipsize="end"
         android:textSize="15sp" />
+
     <TextView
         android:id="@+id/expand_collapse"
         android:layout_width="wrap_content"
@@ -25,6 +27,7 @@
         android:gravity="center"
         android:textColor="@color/main_color"
         android:drawablePadding="3dp"
-        tools:drawableRight="@drawable/icon_green_arrow_up"
+        tools:drawableRight="@mipmap/icon_green_arrow_up"
         android:layout_marginTop="5dp" />
+    
 </LinearLayout>

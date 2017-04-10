@@ -1,4 +1,4 @@
-package me.codeboy.android.aligntextview.util;
+package com.chaychan.viewlib.expandabletextview;
 
 /**
  * 文本工具

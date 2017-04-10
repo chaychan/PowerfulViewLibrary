@@ -28,7 +28,7 @@
         app:hideText="查看更多"
         />
 
-    <jaydenxiao.com.expandabletextview.ExpandableTextView
+    <com.chaychan.viewlib.expandabletextview.ExpandableTextView
         android:id="@+id/tv_intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,15 +37,14 @@
         android:ellipsize="end"
         android:textColor="#666"
         app:animDuration="200"
-        app:collapseDrawable="@drawable/icon_green_arrow_down"
+        app:collapseDrawable="@mipmap/icon_green_arrow_down"
         app:collapseExpandGrarity="right"
         app:collapseExpandTextColor="@color/main_color"
         app:contentTextSize="12sp"
-        app:expandDrawable="@drawable/icon_green_arrow_up"
+        app:expandDrawable="@mipmap/icon_green_arrow_up"
         app:maxCollapsedLines="3"
         app:textCollapse="@string/collapse"
         app:textExpand="@string/expand"/>
-
 
 
 </LinearLayout>

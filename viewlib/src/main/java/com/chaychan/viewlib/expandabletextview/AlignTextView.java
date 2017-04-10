@@ -1,4 +1,4 @@
-package me.codeboy.android.aligntextview;
+package com.chaychan.viewlib.expandabletextview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,8 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.TextView;
+
+import com.chaychan.viewlib.R;
 
 import java.util.ArrayList;
 import java.util.List;
