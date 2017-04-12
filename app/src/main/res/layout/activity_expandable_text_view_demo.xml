@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
->
-
-
-    <com.chaychan.viewlib.PowerfulEditText
-        android:id="@+id/pet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@mipmap/search"
-        />
-
-    <com.chaychan.viewlib.BankCardNumEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <com.chaychan.viewlib.ExpandableLinearLayout
-        android:id="@+id/ell"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:defaultItemCount="2"
-        app:expandText="收起"
-        app:hideText="查看更多"
-        />
+    >
 
     <com.chaychan.viewlib.expandabletextview.ExpandableTextView
-        android:id="@+id/tv_intro"
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_margin="10dp"
         android:ellipsize="end"
         android:textColor="#666"
@@ -42,9 +19,8 @@
         app:collapseExpandTextColor="@color/main_color"
         app:contentTextSize="12sp"
         app:expandDrawable="@mipmap/icon_green_arrow_up"
-        app:maxCollapsedLines="3"
+        app:maxCollapsedLines="4"
         app:textCollapse="@string/collapse"
         app:textExpand="@string/expand"/>
 
-
-</LinearLayout>
+</RelativeLayout>

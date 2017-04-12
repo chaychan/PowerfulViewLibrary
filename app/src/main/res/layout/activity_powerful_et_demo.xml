@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:funcType="canClear"
+        android:hint="自带清除文本功能"
+        />
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:funcType="canWatchPwd"
+        android:hint="自带查看密码功能"
+        android:inputType="textPassword"
+        />
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="控制两侧图标大小"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawableRight="@mipmap/ic_launcher"
+        app:leftDrawableHeight="40dp"
+        app:leftDrawableWidth="40dp"
+        app:rightDrawableHeight="30dp"
+        app:rightDrawableWidth="30dp"
+        />
+
+    <com.chaychan.viewlib.PowerfulEditText
+        android:id="@+id/pet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="自定义右侧图标点击事件"
+        android:drawableRight="@mipmap/search"
+        />
+
+</LinearLayout>

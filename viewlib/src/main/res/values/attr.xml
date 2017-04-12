@@ -62,4 +62,20 @@
     </declare-styleable>
 
 
+    <!--扇形图-->
+    <declare-styleable name="PieChartView">
+        <attr name="gravity">
+            <enum name="top" value="0"></enum>
+            <enum name="centre" value="1"></enum>
+            <enum name="fixXY" value="2"></enum>
+        </attr>
+        <!--扇形的中心空白直径 单位:db-->
+        <attr name="centreRadius" format="dimension"></attr>
+        <!--字体大小-->
+        <attr name="lableTextSize" format="dimension"></attr>
+        <!--第一个扇形的偏移值(突出效果)-->
+        <attr name="firstOffset" format="dimension"></attr>
+    </declare-styleable>
+
+
 </resources>

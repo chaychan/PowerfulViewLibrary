@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.chaychan.viewlib.piechartview.PieChartView
+        android:id="@+id/pieChartView"
+        android:layout_width="250dp"
+        android:layout_height="270dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:lableTextSize="16dp"
+        app:centreRadius="0dp"
+        app:gravity="top"
+        app:firstOffset="0dp"
+        />
+    <TextView
+        android:id="@+id/tv_select_item"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/pieChartView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"/>
+
+</RelativeLayout>
