@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -125,8 +126,21 @@ public class PowerfulEditText extends EditText {
                 mEyeOpenDrawable.setBounds(0, 0, rightWidth, rightHeight);
             }
 
-            //如果是清除功能，则一开始隐藏右侧默认图标，否则不隐藏右侧默认图标
-            setRightIconVisible(funcType == 0 ? false : true);
+            if (funcType == TYPE_CAN_CLEAR){
+                //如果是清除功能
+                String content = getText().toString().trim();
+                if (!TextUtils.isEmpty(content)){
+                    //初始化内容不为空，则不隐藏右侧图标
+                    setRightIconVisible(false);
+                    setSelection(content.length());
+                }else{
+                    setRightIconVisible(true);//隐藏右侧图标
+                }
+            }else{
+                //如果不是清除功能,不隐藏右侧默认图标
+                setRightIconVisible(true);
+            }
+
             //设置输入框里面内容发生改变的监听
             addTextChangedListener(new TextWatcher() {
                 /**
