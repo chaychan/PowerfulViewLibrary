@@ -131,10 +131,10 @@ public class PowerfulEditText extends EditText {
                 String content = getText().toString().trim();
                 if (!TextUtils.isEmpty(content)){
                     //初始化内容不为空，则不隐藏右侧图标
-                    setRightIconVisible(false);
+                    setRightIconVisible(true);
                     setSelection(content.length());
                 }else{
-                    setRightIconVisible(true);//隐藏右侧图标
+                    setRightIconVisible(false);//隐藏右侧图标
                 }
             }else{
                 //如果不是清除功能,不隐藏右侧默认图标

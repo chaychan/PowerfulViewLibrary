@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         app:funcType="canClear"
         android:hint="自带清除文本功能"
-        android:text="加空姐大赛"
         />
 
     <com.chaychan.viewlib.PowerfulEditText
