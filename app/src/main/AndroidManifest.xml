@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".activity.PieChartViewDemoActivity">
         </activity>
+        <activity android:name=".activity.RunningTextViewDemoActivity">
+        </activity>
     </application>
 
 </manifest>

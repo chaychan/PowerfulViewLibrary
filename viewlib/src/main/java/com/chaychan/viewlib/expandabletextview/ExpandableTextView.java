@@ -21,7 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chaychan.viewlib.R;
-import com.chaychan.viewlib.UIUtils;
+import com.chaychan.viewlib.utils.UIUtils;
 
 /**
  * des:可伸展textview

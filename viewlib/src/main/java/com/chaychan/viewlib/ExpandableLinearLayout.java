@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.chaychan.viewlib.utils.UIUtils;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.animation.ValueAnimator;
@@ -47,7 +48,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
         defaultItemCount = ta.getInt(R.styleable.ExpandableLinearLayout_defaultItemCount, 0);
         expandText = ta.getString(R.styleable.ExpandableLinearLayout_expandText);
         hideText = ta.getString(R.styleable.ExpandableLinearLayout_hideText);
-        float fontSize = ta.getDimension(R.styleable.ExpandableLinearLayout_tipTextSize,UIUtils.sp2px(context,14));
+        float fontSize = ta.getDimension(R.styleable.ExpandableLinearLayout_tipTextSize, UIUtils.sp2px(context,14));
         int textColor = ta.getColor(R.styleable.ExpandableLinearLayout_tipTextColor, Color.parseColor("#666666"));
         ta.recycle();
 

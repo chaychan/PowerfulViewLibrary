@@ -77,5 +77,19 @@
         <attr name="firstOffset" format="dimension"></attr>
     </declare-styleable>
 
+    <declare-styleable name="NumberRunningTextView">
+        <!--帧数-->
+        <attr name="frameNum" format="integer"></attr>
+        <!--内容的格式-->
+        <attr name="textType">
+            <enum name="money" value="0"></enum>
+            <enum name="num" value="1"></enum>
+        </attr>
+        <!--是否使用每三位数字一个逗号-->
+        <attr name="useCommaFormat" format="boolean"></attr>
+        <!--是否当内容改变的时候使用动画，不改变则不使用动画-->
+        <attr name="runWhenChange" format="boolean"></attr>
+
+    </declare-styleable>
 
 </resources>

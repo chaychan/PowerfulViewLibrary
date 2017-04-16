@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/srl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
+            >
+
+            <com.chaychan.viewlib.NumberRunningTextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0.00"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:runWhenChange="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="总收益(元)"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/holo_red_light"
+            >
+
+            <com.chaychan.viewlib.NumberRunningTextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="200"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                app:textType="num"
+                app:runWhenChange="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_num"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="推荐会员数(人)"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

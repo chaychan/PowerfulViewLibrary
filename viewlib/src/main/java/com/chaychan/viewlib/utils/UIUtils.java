@@ -1,4 +1,4 @@
-package com.chaychan.viewlib;
+package com.chaychan.viewlib.utils;
 
 import android.content.Context;
 
