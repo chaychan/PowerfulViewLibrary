@@ -217,6 +217,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 //            mTvContent.setMaxLines(mMaxCollapsedLines);
             valueAnimator = new ValueAnimator().ofInt(getHeight(), mCollapsedHeight);
         } else {
+            mCollapsedHeight = getHeight();
             valueAnimator = new ValueAnimator().ofInt(getHeight(), getHeight() +
                     mTextHeightWithMaxLines - mTvContent.getHeight());
         }
