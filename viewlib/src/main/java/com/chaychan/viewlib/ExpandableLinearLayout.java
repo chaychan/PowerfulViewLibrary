@@ -69,7 +69,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
 
 
     public void addItem(View view) {
-        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         llContainer.addView(view,params);
         refreshUI();
     }
