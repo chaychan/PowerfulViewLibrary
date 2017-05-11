@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".activity.RunningTextViewDemoActivity">
         </activity>
+        <activity android:name=".activity.ExpandableLinearLayoutDemoActivity">
+        </activity>
     </application>
 
 </manifest>

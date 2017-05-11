@@ -69,8 +69,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
 
 
     public void addItem(View view) {
-        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        llContainer.addView(view,params);
+        llContainer.addView(view);
         refreshUI();
     }
 
@@ -100,7 +99,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
             int viewHeight = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
 
             view.measure(viewWidth, viewHeight);
-            height += view.getMeasuredHeight();
+            height += view.getMeasuredHeight() + view.getPaddingTop() + view.getPaddingBottom();
         }
 
         doAnimation(params.height,height);//执行动画
@@ -120,7 +119,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
             int viewHeight = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
 
             view.measure(viewWidth, viewHeight);
-            height += view.getMeasuredHeight();
+            height += view.getMeasuredHeight()+ view.getPaddingTop() + view.getPaddingBottom();
         }
 
         if (withAnimation){
@@ -128,6 +127,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
         }else{
             params.height = height;
             llContainer.setLayoutParams(params);
+            llContainer.requestLayout();
         }
     }
 
@@ -147,6 +147,7 @@ public class ExpandableLinearLayout extends FrameLayout implements View.OnClickL
                 LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) llContainer.getLayoutParams();
                 params.height = height;
                 llContainer.setLayoutParams(params);
+                llContainer.requestLayout();
             }
         });
 

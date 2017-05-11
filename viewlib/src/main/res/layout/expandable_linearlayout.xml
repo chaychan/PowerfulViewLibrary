@@ -17,8 +17,8 @@
         android:layout_gravity="center"
         android:minHeight="30dp"
         android:id="@+id/rl_bottom"
-        android:layout_marginTop="5dp"
         android:visibility="gone"
+        android:layout_marginBottom="10dp"
         >
 
         <TextView
