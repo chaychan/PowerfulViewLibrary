@@ -53,6 +53,8 @@ public class NumberRunningTextView extends TextView {
         textType = ta.getInt(R.styleable.NumberRunningTextView_textType, MONEY_TYPE);
         useCommaFormat = ta.getBoolean(R.styleable.NumberRunningTextView_useCommaFormat, true);
         runWhenChange = ta.getBoolean(R.styleable.NumberRunningTextView_runWhenChange,true);
+
+        ta.recycle();
     }
 
 
