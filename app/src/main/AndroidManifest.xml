@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".activity.ExpandableLinearLayoutDemoActivity">
         </activity>
+        <activity android:name=".activity.ExpandableLinearLayoutChooseActivity">
+        </activity>
     </application>
 
 </manifest>

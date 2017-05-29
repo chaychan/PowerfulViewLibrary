@@ -7,10 +7,14 @@
         <attr name="tipTextSize" format="dimension" />
         <!--字体颜色-->
         <attr name="tipTextColor" format="color"/>
-        <!--展开时的文字提示-->
+        <!--待展开的文字提示-->
         <attr name="expandText" format="string" />
-        <!--收起时的文字提示-->
+        <!--待收起时的文字提示-->
         <attr name="hideText" format="string" />
+        <!--向下的箭头的图标-->
+        <attr name="arrowDownImg" format="reference" />
+        <!--是否使用默认的底部-->
+        <attr name="useDefaultBottom" format="boolean" />
     </declare-styleable>
 
 
