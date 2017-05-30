@@ -230,11 +230,11 @@ SwipeRefreshLayout的刷新回调中，只做了这样的处理，NumberRunningT
 ###场景介绍
 &emsp;&emsp;开发的过程中，有时我们需要使用到这样一个功能，在展示一些商品的时候，默认只显示前几个，例如先显示前三个，这样子不会一进入页面就被商品列表占据了大部分，可以先让用户可以看到页面的大概，当用户需要查看更多的商品时，点击“展开”，就可以看到被隐藏的商品，点击“收起”，则又回到一开始的状态，只显示前几个，其他的收起来了。就拿美团外卖的订单详情页的布局作为例子，请看以下图片：
 
-![](../img/meituan1.jpg)    
+![](../introduce_img/ell/meituan1.jpg)    
 
-![](../img/meituan2.jpg)
+![](../introduce_img/ell/meituan2.jpg)
 
-&emsp;&emsp;订单详情页面一开始只显示购买的前三样菜，当点击“点击展开的时候”，则将购买的所有外卖都展示出来，当点击“点击收起”时，则将除了前三样菜以外的都隐藏起来。其实要完成这样的功能并不难，为了方便自己和大家以后的开发，我将其封装成一个控件，取名为ExpandableLinearLayout，下面开始介绍它如何使用以及源码解析。
+&emsp;&emsp;订单详情页面一开始只显示购买的前三样菜，当点击“点击展开”时，则将购买的所有外卖都展示出来，当点击“点击收起”时，则将除了前三样菜以外的都隐藏起来。其实要完成这样的功能并不难，为了方便自己和大家以后的开发，我将其封装成一个控件，取名为ExpandableLinearLayout，下面开始介绍它如何使用以及源码解析。
 
 ##使用方式
 ###一、使用默认展开和收起的底部
@@ -309,34 +309,38 @@ SwipeRefreshLayout的刷新回调中，只做了这样的处理，NumberRunningT
 
 效果如下：
 
-![](../img/1.gif)   
+![](../introduce_img/ell/ell_1.gif)   
 
 ####1.支持修改默认显示的个数
-可以修改默认显示的个数，比如将其修改为3，defaultItemCount="3"
+可以修改默认显示的个数，比如将其修改为3，即defaultItemCount="3"
 
-效果为：
+效果如下：
 
-![](../img/2.gif)
+![](../introduce_img/ell/ell_2.gif)
 
 ####2.支持修改待展开和待收起状态下的文字提示
 可以修改待展开状态和待收起状态下的文字提示，比如修改expandText="查看更多"，hideText="收起更多"
 
-效果为：
+效果如下：
 
-![](../img/3.gif)
+![](../introduce_img/ell/ell_3.gif)
 
 
 ####3.支持修改提示文字的大小、颜色
 
-可以修改提示文字的大小和颜色，对应的属性分别是tipTextSize，tipTextColor。
-
-
-####4.支持更换箭头的图标
-可以修改箭头的图标，只需配置arrowDownImg属性，引用对应的图标，这里的箭头图标需要是向下的箭头，这样当展开和收起时，箭头会做相应的旋转动画。设置arrowDownImg="@mipmap/arrow_down_grey"，修改为灰色的向下图标。
+可以修改提示文字的大小和颜色，对应的属性分别是tipTextSize，tipTextColor。比如修改tipTextSize="16sp"，tipTextColor="#ff7300"
 
 效果如下：
 
-![](../img/4.gif)
+![](../introduce_img/ell/ell_tip_text_demo.gif)
+
+
+####4.支持更换箭头的图标
+可以修改箭头的图标，只需配置arrowDownImg属性，引用对应的图标，这里的箭头图标需要是向下的箭头，这样当展开和收起时，箭头会做相应的旋转动画。设置arrowDownImg="@mipmap/arrow\_down\_grey"，修改为灰色的向下图标。
+
+效果如下：
+
+![](../introduce_img/ell/ell_4.gif)
 
 ###二、使用自定义底部
 
@@ -431,9 +435,9 @@ java文件中，代码如下：
 
 效果如下：
 
-![](../img/5.gif)
+![](http://img-1252302110.costj.myqcloud.com/ell/ell_5.gif)
 
-到这里，ExpandableLinearLayout的使用就介绍完毕了，关于ExpandableLinearLayout的源码可以查看我的博客：
+到这里，ExpandableLinearLayout的使用就介绍完毕了，关于ExpandableLinearLayout的源码可以查看我的博客：[http://blog.csdn.net/Chay_Chan/article/details/72810770](http://blog.csdn.net/Chay_Chan/article/details/72810770)
 
 
 ####**导入方式**####
@@ -450,5 +454,5 @@ java文件中，代码如下：
 
     dependencies {
 			......
-	        compile 'com.github.chaychan:PowerfulViewLibrary:1.1.0'
+	        compile 'com.github.chaychan:PowerfulViewLibrary:1.1.6'
 	}
