@@ -48,7 +48,7 @@ public class ExpandableLinearLayout extends LinearLayout implements View.OnClick
         super(context, attrs, defStyleAttr);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ExpandableLinearLayout);
-        defaultItemCount = ta.getInt(R.styleable.ExpandableLinearLayout_defaultItemCount, 0);
+        defaultItemCount = ta.getInt(R.styleable.ExpandableLinearLayout_defaultItemCount, 2);
         expandText = ta.getString(R.styleable.ExpandableLinearLayout_expandText);
         hideText = ta.getString(R.styleable.ExpandableLinearLayout_hideText);
         fontSize = ta.getDimension(R.styleable.ExpandableLinearLayout_tipTextSize, UIUtils.sp2px(context, 14));
@@ -61,7 +61,7 @@ public class ExpandableLinearLayout extends LinearLayout implements View.OnClick
     }
 
     /**
-     * 渲染完成时初始化view
+     * 渲染完成时初始化默认底部view
      */
     @Override
     protected void onFinishInflate() {
@@ -69,6 +69,9 @@ public class ExpandableLinearLayout extends LinearLayout implements View.OnClick
         findViews();
     }
 
+    /**
+     * 初始化底部view
+     */
     private void findViews() {
         bottomView = View.inflate(getContext(), R.layout.item_ell_bottom, null);
         ivArrow = (ImageView) bottomView.findViewById(R.id.iv_arrow);

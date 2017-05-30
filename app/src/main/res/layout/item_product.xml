@@ -3,60 +3,76 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="10dp"
+    android:orientation="vertical"
+
     >
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/ic_default"
-        />
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="隆江猪脚饭"
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_default"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
             >
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                android:textColor="#9f9f9f"
-                />
-
-            <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:drawablePadding="5dp"
-                android:text="99.00"
+                android:text="隆江猪脚饭"
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
+                    android:textColor="#9f9f9f"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="12.00"
+                    />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D1D1D1"/>
 
 </LinearLayout>

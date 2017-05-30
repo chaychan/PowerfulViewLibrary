@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
         <!--商品列表-->
         <com.chaychan.viewlib.ExpandableLinearLayout
             android:id="@+id/ell_product"
@@ -12,316 +18,38 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            app:defaultItemCount="2"
+            app:defaultItemCount="3"
             app:expandText="查看更多"
-            app:hideText="收起内容"
+            app:hideText="收起更多"
+            app:useDefaultBottom="true"
+            app:arrowDownImg="@mipmap/arrow_down_grey"
             >
-
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            >
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_default"
-                />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="隆江猪脚饭"
-                    />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                        android:textColor="#9f9f9f"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:drawablePadding="5dp"
-                        android:text="99.00"
-                        />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                >
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_default"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="隆江猪脚饭"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                            android:textColor="#9f9f9f"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:drawablePadding="5dp"
-                            android:text="99.00"
-                            />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                >
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_default"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="隆江猪脚饭"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                            android:textColor="#9f9f9f"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:drawablePadding="5dp"
-                            android:text="99.00"
-                            />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                >
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_default"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="隆江猪脚饭"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                            android:textColor="#9f9f9f"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:drawablePadding="5dp"
-                            android:text="99.00"
-                            />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                >
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_default"
-                    />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="隆江猪脚饭"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        >
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="特别好吃哦，带回家啊时间还是健康的贺卡上空间的挥洒健康的贺卡姐啊上课黑色的健康哈空间"
-                            android:textColor="#9f9f9f"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:drawablePadding="5dp"
-                            android:text="99.00"
-                            />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
 
         </com.chaychan.viewlib.ExpandableLinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠: 4.00"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付款: 56.00元"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </ScrollView>

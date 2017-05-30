@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.chaychan.powerfulviewlibrary">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -24,8 +26,9 @@
         </activity>
         <activity android:name=".activity.RunningTextViewDemoActivity">
         </activity>
-        <activity android:name=".activity.ExpandableLinearLayoutDemoActivity">
+        <activity android:name=".activity.EllDefaultBottomDemoActivity">
         </activity>
+        <activity android:name=".activity.EllCustomBottomDemoActivity"></activity>
         <activity android:name=".activity.ExpandableLinearLayoutChooseActivity">
         </activity>
     </application>

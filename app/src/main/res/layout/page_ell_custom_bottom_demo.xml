@@ -19,30 +19,33 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            app:arrowDownImg="@mipmap/clear_normal"
             app:defaultItemCount="2"
-            app:expandText="查看更多"
-            app:hideText="收起内容"
             app:useDefaultBottom="false"
             >
 
 
         </com.chaychan.viewlib.ExpandableLinearLayout>
 
+        <!--自定义底部-->
         <RelativeLayout
             android:id="@+id/rl_bottom"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/shape_border"
+            android:layout_marginTop="10dp"
             >
 
             <TextView
                 android:id="@+id/tv_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="展开"
+                android:text="点击展开"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="12sp"
                 />
 
 
@@ -50,9 +53,34 @@
                 android:id="@+id/iv_arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/tv_tip"
+                android:background="@mipmap/arrow_down_grey"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <!--优惠、实付款-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠: 4.00"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付款: 56.00元"
+                android:layout_alignParentRight="true"
                 />
 
         </RelativeLayout>

@@ -17,15 +17,13 @@ public class ExpandableLinearLayoutChooseActivity extends AppCompatActivity {
 
     //使用默认底部
     public void useDefaultBottom(View view){
-        Intent intent = new Intent(this, ExpandableLinearLayoutDemoActivity.class);
-        intent.putExtra(ExpandableLinearLayoutDemoActivity.USE_DEFAULT_BOTTOM,true);
+        Intent intent = new Intent(this, EllDefaultBottomDemoActivity.class);
         startActivity(intent);
     }
 
     //使用自定义底部
     public void useCustomBottom(View view){
-        Intent intent = new Intent(this, ExpandableLinearLayoutDemoActivity.class);
-        intent.putExtra(ExpandableLinearLayoutDemoActivity.USE_DEFAULT_BOTTOM,false);
+        Intent intent = new Intent(this, EllCustomBottomDemoActivity.class);
         startActivity(intent);
     }
 }

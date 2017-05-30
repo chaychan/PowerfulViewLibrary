@@ -14,11 +14,11 @@
         android:ellipsize="end"
         android:textColor="#666"
         app:animDuration="200"
-        app:collapseDrawable="@mipmap/icon_green_arrow_down"
+        app:collapseDrawable="@mipmap/icon_orange_arrow_down"
         app:collapseExpandGrarity="right"
         app:collapseExpandTextColor="@color/main_color"
         app:contentTextSize="12sp"
-        app:expandDrawable="@mipmap/icon_green_arrow_up"
+        app:expandDrawable="@mipmap/icon_orange_arrow_up"
         app:maxCollapsedLines="4"
         app:textCollapse="@string/collapse"
         app:textExpand="@string/expand"/>

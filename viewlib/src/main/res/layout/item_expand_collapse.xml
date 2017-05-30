@@ -27,7 +27,7 @@
         android:gravity="center"
         android:textColor="@color/main_color"
         android:drawablePadding="3dp"
-        tools:drawableRight="@mipmap/icon_green_arrow_up"
+        tools:drawableRight="@mipmap/icon_orange_arrow_up"
         android:layout_marginTop="5dp" />
     
 </LinearLayout>
