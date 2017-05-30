@@ -437,7 +437,7 @@ java文件中，代码如下：
 
 ![](./introduce_img/ell/ell_5.gif)
 
-到这里，ExpandableLinearLayout的使用就介绍完毕了，关于ExpandableLinearLayout的源码可以查看我的博客：[http://blog.csdn.net/Chay_Chan/article/details/72810770](http://blog.csdn.net/Chay_Chan/article/details/72810770)
+到这里，ExpandableLinearLayout的使用就介绍完毕了，关于ExpandableLinearLayout的源码解析可以查看我的博客：[http://blog.csdn.net/Chay_Chan/article/details/72810770](http://blog.csdn.net/Chay_Chan/article/details/72810770)
 
 
 ####**导入方式**####
