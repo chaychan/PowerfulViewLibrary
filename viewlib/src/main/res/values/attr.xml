@@ -82,8 +82,9 @@
     </declare-styleable>
 
     <declare-styleable name="NumberRunningTextView">
-        <!--帧数-->
-        <attr name="frameNum" format="integer"></attr>
+        <attr name="duration" format="integer"></attr>
+        <attr name="minNum" format="integer"></attr>
+        <attr name="minMoney" format="float"></attr>
         <!--内容的格式-->
         <attr name="textType">
             <enum name="money" value="0"></enum>

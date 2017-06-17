@@ -22,8 +22,8 @@ public class RunningTextViewDemoActivity extends AppCompatActivity {
         initView();
         initListener();
 
-        tvMoney.setContent("1354.00");
-        tvNum.setContent("200");
+        tvMoney.setContent("1454.00");
+        tvNum.setContent("300");
     }
 
     private void initView(){
