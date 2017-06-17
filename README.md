@@ -2,15 +2,15 @@
 
 ###PowerfulEditText介绍  
 
-[https://github.com/chaychan/PowerfulViewLibrary/readmes/PowerfulEditTextIntro.md](https://github.com/chaychan/PowerfulViewLibrary/readmes/PowerfulEditTextIntro.md)
+[https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/PowerfulEditText.md](https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/PowerfulEditText.md)
 
 ###NumberRunningTextView介绍 
 
-[https://github.com/chaychan/PowerfulViewLibrary/readmes/NumRunningTextViewIntro.md](https://github.com/chaychan/PowerfulViewLibrary/readmes/NumRunningTextViewIntro.md)
+[https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/PowerfulEditText.md](https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/NumRunningTextView.md)
 
 ###ExpandableLinearLayout介绍 
 
-[https://github.com/chaychan/PowerfulViewLibrary/readmes/ExpandableLinearLayout.md](https://github.com/chaychan/PowerfulViewLibrary/readmes/ExpandableLinearLayout.md)
+[https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/PowerfulEditText.md](https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/ExpandableLinearLayout.md)
 
 ####**导入方式**####
 在项目根目录下的build.gradle中的allprojects{}中，添加jitpack仓库地址，如下：
