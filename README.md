@@ -26,5 +26,5 @@
 
     dependencies {
 			......
-	        compile 'com.github.chaychan:PowerfulViewLibrary:1.1.6'
+	        compile 'com.github.chaychan:PowerfulViewLibrary:1.1.7'
 	}
