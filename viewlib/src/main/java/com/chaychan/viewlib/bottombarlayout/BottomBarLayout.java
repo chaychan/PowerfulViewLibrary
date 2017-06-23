@@ -50,7 +50,7 @@ public class BottomBarLayout extends LinearLayout implements ViewPager.OnPageCha
         super.setOrientation(orientation);
     }
 
-    public void setmViewPager(ViewPager mViewPager) {
+    public void setViewPager(ViewPager mViewPager) {
         this.mViewPager = mViewPager;
         init();
     }

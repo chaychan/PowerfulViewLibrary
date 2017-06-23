@@ -65,7 +65,7 @@ public class BottomBarLayoutDemoActivity extends FragmentActivity {
 
     private void initListener() {
         vpContent.setAdapter(new MyAdapter(getSupportFragmentManager()));
-        bbl.setmViewPager(vpContent);
+        bbl.setViewPager(vpContent);
     }
 
     class MyAdapter extends FragmentStatePagerAdapter{

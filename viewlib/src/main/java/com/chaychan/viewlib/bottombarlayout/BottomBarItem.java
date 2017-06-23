@@ -97,16 +97,11 @@ public class BottomBarItem extends LinearLayout {
         addView(view);
     }
 
-    private ImageView createImageView() {
-        mImageView = new ImageView(mContext);
-        mImageView.setImageResource(mIconNormalResourceId);
+    public ImageView getImageView() {
         return mImageView;
     }
 
-    private TextView creatTextView() {
-        mTextView = new TextView(mContext);
-
-        mTextView.setGravity(Gravity.CENTER);
+    public TextView getTextView() {
         return mTextView;
     }
 
