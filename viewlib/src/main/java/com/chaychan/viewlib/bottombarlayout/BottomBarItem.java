@@ -105,6 +105,14 @@ public class BottomBarItem extends LinearLayout {
         return mTextView;
     }
 
+    public void setIconNormalResourceId(int mIconNormalResourceId) {
+        this.mIconNormalResourceId = mIconNormalResourceId;
+    }
+
+    public void setIconSelectedResourceId(int mIconSelectedResourceId) {
+        this.mIconSelectedResourceId = mIconSelectedResourceId;
+    }
+
     public void setStatus(boolean isSelected){
         mImageView.setImageResource(isSelected?mIconSelectedResourceId:mIconNormalResourceId);
         mTextView.setTextColor(isSelected?mTextColorSelected:mTextColorNormal);
