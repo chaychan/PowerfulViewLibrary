@@ -29,7 +29,7 @@ public class BottomBarItem extends LinearLayout {
     private int mTextSize = 12;//文字大小 默认为12sp
     private int mTextColorNormal = 0xFF999999;    //描述文本的默认显示颜色
     private int mTextColorSelected = 0xFF46C01B;  //述文本的默认选中显示颜色
-    private int mMarginTop = 5;//文字和图标的距离,默认5dp
+    private int mMarginTop = 0;//文字和图标的距离,默认0dp
     private TextView mTextView;
     private ImageView mImageView;
 
