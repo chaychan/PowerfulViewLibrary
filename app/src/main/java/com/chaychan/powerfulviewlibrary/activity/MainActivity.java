@@ -16,7 +16,8 @@ public class MainActivity extends ListActivity {
             new DemoBean("ExpandableTextViewDemo",ExpandableTextViewDemoActivity.class),
             new DemoBean("PieChartViewDemo",PieChartViewDemoActivity.class),
             new DemoBean("RunningTextViewDemo",RunningTextViewDemoActivity.class),
-            new DemoBean("ExpandableLinearLayoutDemo",ExpandableLinearLayoutChooseActivity.class)
+            new DemoBean("ExpandableLinearLayoutDemo",ExpandableLinearLayoutChooseActivity.class),
+            new DemoBean("BottomBarLayoutDemoActivity",BottomBarLayoutDemoActivity.class)
     };
 
     @Override

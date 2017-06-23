@@ -28,8 +28,10 @@
         </activity>
         <activity android:name=".activity.EllDefaultBottomDemoActivity">
         </activity>
-        <activity android:name=".activity.EllCustomBottomDemoActivity"></activity>
+        <activity android:name=".activity.EllCustomBottomDemoActivity"/>
         <activity android:name=".activity.ExpandableLinearLayoutChooseActivity">
+        </activity>
+        <activity android:name=".activity.BottomBarLayoutDemoActivity">
         </activity>
     </application>
 
