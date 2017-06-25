@@ -90,7 +90,7 @@ public class BottomBarItem extends LinearLayout {
         mTextView.setText(mText);
         mTextView.setTextColor(mTextColorNormal);
 
-        LinearLayout.LayoutParams layoutParams = (LayoutParams) mTextView.getLayoutParams();
+        LayoutParams layoutParams = (LayoutParams) mTextView.getLayoutParams();
         layoutParams.topMargin = mMarginTop;
         mTextView.setLayoutParams(layoutParams);
 
