@@ -1,7 +1,7 @@
 ### NumberRunningTextView介绍
 &emsp;&emsp;NumberRunningTextView是一个自带数字滚动动画的TextView,通过使用setContent(String str)方法，传入相应的金额数字字符串（如"1354.00"），或者数字的字符串（如200）,当页面初始化完成的时候，就可以看到数字滚动的效果，和支付宝中进入余额宝界面，显示余额滚动的效果类似，具体的效果如下：
 
-![](./introduce_img/running_tv_1.gif)
+![](./introduce_img/nrtv/running_tv_1.gif)
 
 ### 使用
 在布局文件中，使用NumberRunningTextView，代码如下：
@@ -43,12 +43,12 @@
 #### 关闭金额的自动格式化（每三位数字添加一个逗号）
 &emsp;&emsp;上图所示，最后显示的金额数字经过了处理，每三位添加一个逗号，这使得数字看起来比较好看，金额默认是使用这种格式，如果不想要这种格式的数字，可以在布局文件中，NumberRunningTextView的配置中，将useCommaFormat设置为false,这样最终的数字就不会是带有逗号了，效果如下：
 
-![](./introduce_img/running_tv_2.gif)
+![](./introduce_img/nrtv/running_tv_2.gif)
 
 #### 关闭执行动画的时机
 &emsp;&emsp;当一开始进入界面的时候，初始化数据完毕，NumberRunningTextView设置数据完毕，会自动执行数字滚动的动画，如果进行刷新操作，从服务器获取新的数据，重新设置数据，NumberRunningTextView会自动判断传入的内容是否有变化，如果没有变化，则不会再次滚动，这和支付宝的余额宝界面中的金额类似，当在余额宝界面下拉刷新时，金额没有变化，数字不会再次滚动，而当提现后重新回到该界面，金额发生变化后，就会再次滚动，效果如下:
 
-![](./introduce_img/running_tv_3.gif)
+![](./introduce_img/nrtv/running_tv_3.gif)
 
 SwipeRefreshLayout的刷新回调中，只做了这样的处理，NumberRunningTextView设置的内容还是原来的数据。
 
@@ -74,12 +74,12 @@ SwipeRefreshLayout的刷新回调中，只做了这样的处理，NumberRunningT
 
 效果如下：
 
-![](./introduce_img/running_tv_4.gif)
+![](./introduce_img/nrtv/running_tv_4.gif)
 
 
 &emsp;&emsp;如果想要在刷新的时候，无论内容是否有变化都要执行滚动动画的话，可以在布局文件中，NumberRunningTextView的配置中，将runWhenChange设置为false即可,此时，无论内容是否有变化，都会执行滚动动画，效果如下：
 
-![](./introduce_img/running_tv_5.gif)
+![](./introduce_img/nrtv/running_tv_5.gif)
 
 
 #### 可以修改数字滚动动画执行的时间
