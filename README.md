@@ -14,7 +14,7 @@
 
 ### BottomBarLayout(轻量级底部导航栏)介绍
 
-[https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/BottomBarLayout.md](https://github.com/chaychan/PowerfulViewLibrary/blob/master/readmes/BottomBarLayout.md)
+[http://blog.csdn.net/chay_chan/article/details/73715607](http://blog.csdn.net/chay_chan/article/details/73715607)
 
 #### **导入方式**
 在项目根目录下的build.gradle中的allprojects{}中，添加jitpack仓库地址，如下：
