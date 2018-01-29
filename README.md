@@ -31,3 +31,12 @@
     dependencies {
 	        compile 'com.github.chaychan:PowerfulViewLibrary:1.2.1'
 	}
+
+
+#### 支持和鼓励
+
+如果觉得我的项目对你有所帮助的话，不妨打赏一下吧！这样我会更加有动力去完善好这个项目：
+
+微信赞赏：
+
+![](http://orondz6hn.bkt.clouddn.com/transfer_code/wechat_transfer.jpg)       
