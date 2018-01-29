@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.chaychan.viewlib.utils.StringUtils;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 /**
@@ -97,19 +98,20 @@ public class NumberRunningTextView extends TextView {
     public void playMoneyAnim(String moneyStr) {
         String money = moneyStr.replace(",", "").replace("-", "");//如果传入的数字已经是使用逗号格式化过的，或者含有符号,去除逗号和负号
         try {
-            float finalFloat = Float.parseFloat(money);
+            BigDecimal bigDecimal = new BigDecimal(money);
+            float finalFloat = bigDecimal.floatValue();
             if (finalFloat < minMoney) {
                 //如果传入的为0，则直接使用setText()
                 setText(moneyStr);
                 return;
             }
-            ValueAnimator floatAnimator =  ValueAnimator.ofFloat(0, finalFloat);
+            ValueAnimator floatAnimator =  ValueAnimator.ofObject(new BigDecimalEvaluator(),new BigDecimal(0), bigDecimal);
             floatAnimator.setDuration(duration);
             floatAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    float currentNum = (float) animation.getAnimatedValue();
-                    String str = formatter.format(Double.parseDouble(String.valueOf(currentNum)));//格式化成两位小数
+                    BigDecimal currentNum = (BigDecimal) animation.getAnimatedValue();
+                    String str = formatter.format(Double.parseDouble(currentNum.toString()));//格式化成两位小数
                     // 更新显示的内容
                     if (useCommaFormat) {
                         //使用每三位数字一个逗号的格式
