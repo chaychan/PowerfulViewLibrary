@@ -39,4 +39,4 @@
 
 微信赞赏：
 
-![](http://orondz6hn.bkt.clouddn.com/transfer_code/wechat_transfer.jpg)       
+![](../readmes/introduce_img/transfer_code.jpg)       
