@@ -39,4 +39,4 @@
 
 微信赞赏：
 
-![](../readmes/introduce_img/transfer_code.jpg)       
+![](/readmes/introduce_img/transfer_code.jpg) 
